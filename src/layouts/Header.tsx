@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { LuMenu } from "react-icons/lu";
 import { IoIosArrowBack } from "react-icons/io";
+import { IoClose } from "react-icons/io5";  // Import ikon Close
 import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
 
@@ -9,9 +10,9 @@ function Header() {
     const location = useLocation();
     const menuRef = useRef<HTMLDivElement>(null);
 
-    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const toggleMenu = () => setMenuOpen(prevState => !prevState);
 
-    const noBackArrowPaths = ["/", "/menu", "/history", "/settings"];
+    const noBackArrowPaths = ["/", "/menu", "/daily-offers", "/settings"];
     const shouldShowBackArrow = !noBackArrowPaths.includes(location.pathname);
 
     useEffect(() => {
@@ -40,10 +41,18 @@ function Header() {
                     className="text-2xl cursor-pointer text-white"
                 />
             ) : (
-                <LuMenu
-                    onClick={toggleMenu}
-                    className="text-2xl cursor-pointer text-white"
-                />
+                // Tampilkan ikon Close jika menu terbuka, jika tidak tampilkan ikon Menu
+                menuOpen ? (
+                    <IoClose
+                        onClick={toggleMenu}
+                        className="text-2xl cursor-pointer text-white"
+                    />
+                ) : (
+                    <LuMenu
+                        onClick={toggleMenu}
+                        className="text-2xl cursor-pointer text-white"
+                    />
+                )
             )}
             <div className="text-center flex-1">
                 <p className="text-lg font-semibold text-white">Our Order's</p>
@@ -68,9 +77,6 @@ function Header() {
                     </li>
                     <li className="hover:bg-gray-200 p-2 rounded">
                         <Link to="/daily-offers" onClick={handleLinkClick}>Daily Offers</Link>
-                    </li>
-                    <li className="hover:bg-gray-200 p-2 rounded">
-                        <Link to="/history" onClick={handleLinkClick}>History</Link>
                     </li>
                     <li className="hover:bg-gray-200 p-2 rounded">
                         <Link to="/settings" onClick={handleLinkClick}>Settings</Link>

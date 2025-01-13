@@ -8,7 +8,8 @@ import DetailOngoingOrder from './pages/order/components/DetailOngoingOrder';
 import DetailCompletedOrder from './pages/order/components/DetailCompletedOrder';
 import AddNewCategory from './pages/menu/components/AddNewCategory';
 import AddNewItem from './pages/menu/components/AddNewItem';
-import MenuItemList from './pages/menu/components/MenuItemList';
+import OfferList from './pages/offers/components/OfferList';
+import OfferPage from './pages/offers/OfferPage';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/add-new-category" element={<AddNewCategory />} />
           <Route path="/add-new-item" element={<AddNewItem />} />
-          <Route path="/menu-item-list" element={<MenuItemList />} />
+          <Route path="/daily-offers" element={<OfferPage />} />
+          <Route path="/offer-list" element={<OfferList />} />
         </Route>
       </Routes>
     </div>
