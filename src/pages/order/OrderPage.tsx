@@ -7,7 +7,7 @@ function OrderPage() {
     const [activeTab, setActiveTab] = useState("new");
 
     return (
-        <div className="">
+        <div className="pt-20">
             <div className="flex justify-between px-3 border-b-2 border-gray-300">
                 <button
                     onClick={() => setActiveTab("new")}

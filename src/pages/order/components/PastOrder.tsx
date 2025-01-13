@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function PastOrder() {
     const orderStatus = "Delivered";
 
@@ -42,9 +44,12 @@ function PastOrder() {
                         {orderStatus === "Delivered" ? "Order Delivered" : "Order Cancelled"}
                     </p>
                 </div>
-                <button className="text-primary border-2 border-primary p-1 text-xs md:text-base rounded font-normal hover:bg-primary hover:text-white transition w-1/4">
+                <Link
+                    to="/detail-past-order"
+                    className="text-primary border-2 border-primary p-1 text-xs md:text-base rounded font-normal hover:bg-primary hover:text-white transition w-1/4 text-center"
+                >
                     View Details
-                </button>
+                </Link>
             </div>
         </div>
     );

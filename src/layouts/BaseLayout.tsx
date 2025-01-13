@@ -9,7 +9,7 @@ function Layout() {
                 <Header />
             </header>
 
-            <main className="pt-20 bg-[#F7F8FA]">
+            <main>
                 <Outlet />
             </main>
 

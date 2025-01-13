@@ -9,7 +9,7 @@ function Header() {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
-        <header className="relative flex justify-between items-center p-5 bg-primary">
+        <header className="relative flex justify-between items-center py-5 px-3 bg-primary">
             <LuMenu
                 onClick={toggleMenu}
                 className="text-2xl cursor-pointer text-white"
@@ -29,7 +29,7 @@ function Header() {
             >
                 <ul className="flex flex-col p-4 space-y-2">
                     <li className="hover:bg-gray-200 p-2 rounded">
-                        <Link to="/order">Order</Link>
+                        <Link to="/">Order</Link>
                     </li>
                     <li className="hover:bg-gray-200 p-2 rounded">
                         <Link to="/menu">Menu</Link>

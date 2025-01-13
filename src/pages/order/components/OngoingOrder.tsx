@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function OngoingOrder() {
     return (
         <div className="w-full flex flex-col border border-gray-300 rounded-lg overflow-hidden">
@@ -18,6 +20,7 @@ function OngoingOrder() {
                 </div>
             </div>
 
+            {/* Order Items */}
             <div className="flex flex-col gap-y-2 p-4 md:p-6">
                 <div className="flex justify-between text-xs md:text-sm items-center">
                     <p className="flex-1 text-left">Nasi Goreng</p>
@@ -42,9 +45,12 @@ function OngoingOrder() {
                         <option value="">On The Way</option>
                     </select>
                 </div>
-                <button className="text-primary border-2 border-primary p-1 text-xs md:text-base rounded font-normal hover:bg-primary hover:text-white transition w-1/4">
+                <Link
+                    to="/detail-ongoing-order"
+                    className="text-primary border-2 border-primary p-1 text-xs md:text-base rounded font-normal hover:bg-primary hover:text-white transition w-1/4 text-center"
+                >
                     View Details
-                </button>
+                </Link>
             </div>
         </div>
     );
