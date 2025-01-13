@@ -6,6 +6,9 @@ import OrderPage from './pages/order/OrderPage';
 import DetailNewOrder from './pages/order/components/DetailNewOrder';
 import DetailOngoingOrder from './pages/order/components/DetailOngoingOrder';
 import DetailCompletedOrder from './pages/order/components/DetailCompletedOrder';
+import AddNewCategory from './pages/menu/components/AddNewCategory';
+import AddNewItem from './pages/menu/components/AddNewItem';
+import MenuItemList from './pages/menu/components/MenuItemList';
 
 function App() {
   return (
@@ -17,7 +20,9 @@ function App() {
           <Route path="/detail-ongoing-order" element={<DetailOngoingOrder />} />
           <Route path="/detail-past-order" element={<DetailCompletedOrder />} />
           <Route path="/menu" element={<MenuPage />} />
-
+          <Route path="/add-new-category" element={<AddNewCategory />} />
+          <Route path="/add-new-item" element={<AddNewItem />} />
+          <Route path="/menu-item-list" element={<MenuItemList />} />
         </Route>
       </Routes>
     </div>
