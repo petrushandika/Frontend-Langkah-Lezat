@@ -10,6 +10,7 @@ import AddNewCategory from './pages/menu/components/AddNewCategory';
 import AddNewItem from './pages/menu/components/AddNewItem';
 import OfferList from './pages/offers/components/OfferList';
 import OfferPage from './pages/offers/OfferPage';
+import ProfilePage from './pages/profile/ProfilePage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/add-new-item" element={<AddNewItem />} />
           <Route path="/daily-offers" element={<OfferPage />} />
           <Route path="/offer-list" element={<OfferList />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </div>

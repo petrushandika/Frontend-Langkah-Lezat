@@ -41,7 +41,6 @@ function Header() {
                     className="text-2xl cursor-pointer text-white"
                 />
             ) : (
-                // Tampilkan ikon Close jika menu terbuka, jika tidak tampilkan ikon Menu
                 menuOpen ? (
                     <IoClose
                         onClick={toggleMenu}
