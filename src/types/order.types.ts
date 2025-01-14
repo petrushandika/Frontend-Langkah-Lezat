@@ -7,7 +7,9 @@ export type Order = {
     | "Order_Dispatched"
     | "Order_Preparing"
     | "On_The_Way"
-    | "Order_Delivered";
+    | "Order_Delivered"
+    | "Order_Completed"
+    | "Order_Cancelled";
   userId: number;
   user: User;
   orderDetail: OrderDetail[];

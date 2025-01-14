@@ -31,7 +31,6 @@ function DetailNewOrder() {
 
     const { order, quantity, price, menu } = orderDetail;
 
-    // Calculate total based on quantity and price
     const total = price * quantity;
 
     return (
@@ -108,7 +107,6 @@ function DetailNewOrder() {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* Mapping the order's menu */}
                             <tr>
                                 <td className="p-2">{menu.name}</td>
                                 <td className="p-2 text-center">Qty: {quantity}</td>

@@ -14,6 +14,7 @@ import SettingPage from './pages/setting/SettingPage';
 import LoginPage from './pages/authentication/LoginPage';
 import RegisterPage from './pages/authentication/RegisterPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import DetailCancelledOrder from './pages/order/components/DetailCancelledOrder';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/order/:id" element={<DetailNewOrder />} />
             <Route path="/order/ongoing/:id" element={<DetailOngoingOrder />} />
             <Route path="/order/completed/:id" element={<DetailCompletedOrder />} />
+            <Route path="/order/cancelled/:id" element={<DetailCancelledOrder />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/menu/category/new" element={<AddNewCategory />} />
             <Route path="/menu/item/new" element={<AddNewItem />} />
