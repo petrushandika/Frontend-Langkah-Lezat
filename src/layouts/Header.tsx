@@ -12,7 +12,7 @@ function Header() {
 
     const toggleMenu = () => setMenuOpen(prevState => !prevState);
 
-    const noBackArrowPaths = ["/", "/menu", "/daily-offers", "/settings"];
+    const noBackArrowPaths = ["/", "/menu", "/offers", "/user/settings"];
     const shouldShowBackArrow = !noBackArrowPaths.includes(location.pathname);
 
     useEffect(() => {
@@ -75,10 +75,10 @@ function Header() {
                         <Link to="/menu" onClick={handleLinkClick}>Menu</Link>
                     </li>
                     <li className="hover:bg-gray-200 p-2 rounded">
-                        <Link to="/daily-offers" onClick={handleLinkClick}>Daily Offers</Link>
+                        <Link to="/offers" onClick={handleLinkClick}>Daily Offers</Link>
                     </li>
                     <li className="hover:bg-gray-200 p-2 rounded">
-                        <Link to="/settings" onClick={handleLinkClick}>Settings</Link>
+                        <Link to="/user/settings" onClick={handleLinkClick}>Settings</Link>
                     </li>
                 </ul>
             </nav>
