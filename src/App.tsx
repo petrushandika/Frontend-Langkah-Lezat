@@ -11,6 +11,7 @@ import AddNewItem from './pages/menu/components/AddNewItem';
 import OfferList from './pages/offers/components/OfferList';
 import OfferPage from './pages/offers/OfferPage';
 import ProfilePage from './pages/profile/ProfilePage';
+import SettingPage from './pages/setting/SettingPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/daily-offers" element={<OfferPage />} />
           <Route path="/offer-list" element={<OfferList />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/settings" element={<SettingPage />} />
         </Route>
       </Routes>
     </div>
